@@ -13,6 +13,10 @@ class Persistencia {
         return consultaPorRua.exec()
     }
 
+    static buscaBairro(bairro) {
+        let consultaBairro = ecoPontos.find().populate('bairro')
+        return consultaBairro.exec()
+    }
 
 
 }
