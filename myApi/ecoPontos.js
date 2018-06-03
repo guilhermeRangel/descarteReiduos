@@ -3,14 +3,14 @@ const restful = require('node-restful') //pacote para expor REST
 const mongoose = restful.mongoose
 
 const ecoPontos = new mongoose.Schema({
-    nome: { type: String, require: true, uppercase: true},
-    rua: { type: String, require: true, uppercase: true },
-    numero: { type: Number, require: true },
-    bairro: { type: String, require: true, uppercase: true },
-    telefone: { type: Number, require: false },
-    cep: { type: String, require: false },
-    latitude: { type: Number, require: false },
-    longitude: { type: Number, require: false }
+    nome: { type: String, required: [true, 'Informe o Nome do Destino '], uppercase: true },
+    rua: { type: String, required: [true, 'Informe o nome da rua '], uppercase: true },
+    numero: { type: Number, required: [true, 'Informe o numero! '] },
+    bairro: { type: String, required: [true, 'Informe o bairro '], uppercase: true },
+    telefone: { type: Number, required: false },
+    cep: { type: String, required: false },
+    latitude: { type: Number, required: false },
+    longitude: { type: Number, required: false }
 })
 
 module.exports = restful.model('ecoPontos', ecoPontos) //exporta como ecoPonst

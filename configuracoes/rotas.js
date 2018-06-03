@@ -4,5 +4,9 @@ module.exports = function(servidor) { //recebeu o servidor de através do loader
 //API DE ROUTES
 
  const rotas = express.Router()
- servidor.use('/api', rotas)
+ servidor.use('/myApi', rotas)
+
+//rota da api
+const ecoPontoService = require('../myApi/ecoPontoService')
+ecoPontoService.register(rotas, '/api') //registra na rota informada
 }
