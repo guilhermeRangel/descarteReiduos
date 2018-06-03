@@ -1,3 +1,5 @@
+//aqui eu defini como sera o esquema do banco de dados
+
 const restful = require('node-restful') //pacote para expor REST
 
 const mongoose = restful.mongoose

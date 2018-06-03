@@ -1,3 +1,4 @@
+//aqui eu defino as rotas da app
 const express = require('express')
 
 module.exports = function(servidor) { //recebeu o servidor de através do loader como parametro
