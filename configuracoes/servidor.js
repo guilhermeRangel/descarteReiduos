@@ -9,3 +9,5 @@ servidor.use(jsonBody.json()) //transforma em json
 servidor.listen(porta, () => {
     console.log('App na porta 3001');
 }); 
+
+module.exports = servidor //exporta o servidor para as rotas
