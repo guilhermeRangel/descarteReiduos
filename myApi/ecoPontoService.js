@@ -1,5 +1,8 @@
 const ecoPontos = require('./ecoPontos')
 const _ = require('lodash')
+const fs = require('fs')
+const csv = require('fast-csv')
+
 ecoPontos.methods(['get', 'post', 'put', 'delete'])
 ecoPontos.updateOptions({new: true, runValidators: true}) //put retorna um novo obj
 
@@ -23,7 +26,7 @@ function parseErrors(nodeRestFulErrors){
 
 
 
-ecoPontos.route('countObj', function(req, res, next) {
+ecoPontos.route('countObjos', function(req, res, next) {
     ecoPontos.count(function(erro, valor){
         if(erro) {
             res.status(500).json({errors: [erro]})
@@ -32,6 +35,24 @@ ecoPontos.route('countObj', function(req, res, next) {
         }
     })
 })
+
+
+function csvToJson() {
+    var stringJson = []
+    const strem = fs.createReadStream('ECPS.csv') //le o arquivo
+    const streamCsv = csv({
+        ignoreEmpty : true
+    }).on('data', data => {
+        stringJson = JSON.stringify(data)
+    })
+    strem.pipe(streamCsv)
+}
+
+
+
+
+
+
 
 module.exports = ecoPontos
 
