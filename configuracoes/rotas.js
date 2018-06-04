@@ -11,3 +11,4 @@ module.exports = function(servidor) { //recebeu o servidor de através do loader
 const ecoPontoService = require('../myApi/ecoPontoService')
 ecoPontoService.register(rotas, '/api') //registra na rota informada
 }
+

@@ -21,4 +21,4 @@ class Persistencia {
 
 }
 
-module.exports = Persistencia
+module.exports = persistencia
