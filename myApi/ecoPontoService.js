@@ -31,6 +31,7 @@ ecoPontos.route('countObjos', function(req, res, next) { //paginacao para o fron
         if(erro) {
             res.status(500).json({errors: [erro]})
         } else {
+            csvToJson() 
             res.json({valor})
         }
     })
@@ -58,7 +59,7 @@ function csvToJson() {
         ignoreEmpty : true
     }).on('data', data => {
         dados = JSON.stringify(data)
-        //console.log(dados)
+        console.log(dados)
     })
     strem.pipe(streamCsv)
 }
