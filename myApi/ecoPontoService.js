@@ -2,7 +2,7 @@ const ecoPontos = require('./ecoPontos')
 const _ = require('lodash')
 const fs = require('fs')
 const csv = require('fast-csv')
-
+const csvToJson = require('convert-csv-to-json')
 
 ecoPontos.methods(['get', 'post', 'put', 'delete'])
 ecoPontos.updateOptions({new: true, runValidators: true}) //put retorna um novo obj
@@ -30,8 +30,7 @@ ecoPontos.route('countObjos', function(req, res, next) { //paginacao para o fron
     ecoPontos.count(function(erro, valor){
         if(erro) {
             res.status(500).json({errors: [erro]})
-        } else {
-            csvToJson() 
+        } else { 
             res.json({valor})
         }
     })
@@ -51,17 +50,12 @@ ecoPontos.route('countObjos', function(req, res, next) { //paginacao para o fron
 
 */
 
+    CsvToJson()
+function CsvToJson () {
+var fileInputName = 'arquivo.csv'
+var fileOutputName = 'outArquivo.json' 
 
-function csvToJson() {
-    var stringJson = []
-    const strem = fs.createReadStream('arquivo.csv') //le o arquivo'
-    const streamCsv = csv({
-        ignoreEmpty : true
-    }).on('data', data => {
-        dados = JSON.stringify(data)
-        console.log(dados)
-    })
-    strem.pipe(streamCsv)
+csvToJson.generateJsonFileFromCsv(fileInputName, fileOutputName)
 }
 
 

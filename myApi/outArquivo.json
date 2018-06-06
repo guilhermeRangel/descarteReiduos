@@ -1,0 +1,42 @@
+[
+ {
+  "Nome": "Destino Certo Cristal",
+  "Rua": "Av. Di�rio de Not�cias",
+  "N�mero": "1111",
+  "Bairro": "Cristal",
+  "Telefone": "3311-4730",
+  "Cep": "90840-000",
+  "Latitude": "-30,089092",
+  "Longitude": "-51,248564\r"
+ },
+ {
+  "Nome": "Destino Certo Zona Norte",
+  "Rua": "Av. Bernardino Silveira Amorim",
+  "N�mero": "2261",
+  "Bairro": "Rubem Berta",
+  "Telefone": "3386-2155",
+  "Cep": "91160-000",
+  "Latitude": "-29,999042",
+  "Longitude": "-51,106514\r"
+ },
+ {
+  "Nome": "Destino Certo Vila Cruzeiro",
+  "Rua": "R. Cruzeiro do Sul",
+  "N�mero": "1445",
+  "Bairro": "Santa Tereza",
+  "Telefone": "",
+  "Cep": "90840-000",
+  "Latitude": "-30,081981",
+  "Longitude": "-51,229228\r"
+ },
+ {
+  "Nome": "Destino Certo Teres�polis e Gl�ria",
+  "Rua": "R. Professor Carvalho de Freitas",
+  "N�mero": "1012",
+  "Bairro": "Gl�ria",
+  "Telefone": "",
+  "Cep": "91720-090",
+  "Latitude": "-30,079864",
+  "Longitude": "-51,20187\r"
+ }
+]
