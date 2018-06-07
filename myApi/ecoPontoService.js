@@ -37,20 +37,9 @@ ecoPontos.route('countObjos', function(req, res, next) { //paginacao para o fron
 })
 
 
-/*ecoPontos.route('findAll', function(req, res, next) {
-   _.toString(function(erro, valor){
-        if(erro) {
-            res.status(500).json({errors: [erro]})
-        } else {
-            res.json({valor})
-        }
-        
-    })
-})
 
-*/
 
-    CsvToJson()
+
 function CsvToJson () {
 var fileInputName = 'arquivo.csv'
 var fileOutputName = 'outArquivo.json' 

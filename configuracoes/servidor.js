@@ -4,10 +4,11 @@ const porta = 3001
 const jsonBody = require('body-parser')
 const express = require('express')
 const servidor = express()
+const allowCors = require('./cors')
 
 servidor.use(jsonBody.urlencoded({ extended: true })) //extende para novas funcioalidades
 servidor.use(jsonBody.json()) //transforma em json
-
+servidor.use(allowCors)
 servidor.listen(porta, () => {
     console.log('App na porta 3001');
 }); 
