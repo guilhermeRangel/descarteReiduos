@@ -6,3 +6,8 @@ module.exports = mongoose.connect('mongodb://localhost/de_ecoPontos') //conecta 
 mongoose.Error.messages.general.required = "O atributi '{PATH}' é obrigatorio"
 mongoose.Error.messages.String = "'{VALUE}' não é valido para o atributo '{PATH}.'"
 mongoose.Error.messages.Number = "'{VALUE}' não é valido para o atributo '{PATH}.'"
+
+const bd = mongoose.db('de_ecoPontos')
+//Inserir um documento
+let resultado = await bd.collection('teste').insertOne({nome:'teste'});
+console.log(`Inserido: ${resultado.insertedId}`);

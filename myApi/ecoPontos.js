@@ -1,7 +1,7 @@
 //aqui eu defini como sera o esquema do banco de dados
 const _ = require('lodash')
 const restful = require('node-restful') //pacote para expor REST
-
+const csvToJson = require('convert-csv-to-json')
 const mongoose = restful.mongoose
 
 const ecoPontos = new mongoose.Schema({
@@ -15,5 +15,7 @@ const ecoPontos = new mongoose.Schema({
     longitude: { type: Number, required: false }
 })
 
+        
+      
 
 module.exports = restful.model('ecoPontos', ecoPontos) //exporta como ecoPonst

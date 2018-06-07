@@ -31,7 +31,7 @@ ecoPontos.route('countObjos', function(req, res, next) { //paginacao para o fron
         if(erro) {
             res.status(500).json({errors: [erro]})
         } else { 
-            res.json({valor})
+            res.json(valor)
         }
     })
 })
