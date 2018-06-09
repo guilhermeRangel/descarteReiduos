@@ -37,6 +37,17 @@ ecoPontos.route('countObjos', function(req, res, next) { //paginacao para o fron
 })
 
 
+ecoPontos.route('listarTodos', function(req, res, next) { 
+    ecoPontos.collection.find((function(erro, valor){
+        if(erro) {
+            res.status(500).json({errors: [erro]})
+        } else { 
+            
+            console.log
+        }
+    }))
+   
+})
 
 
 
